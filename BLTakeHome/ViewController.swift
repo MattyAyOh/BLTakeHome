@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var channelNameLabel: UILabel!
+    @IBOutlet weak var channelNameTextFIeld: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func sendToUserToggled(_ sender: UISwitch) {
+        channelNameLabel.isEnabled = !sender.isOn
+        channelNameTextFIeld.isEnabled = !sender.isOn
+    }
+    
 }
 
