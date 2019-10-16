@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
       self.pushNotifications.start(instanceId: "3501f6a8-dce2-4333-94ac-d32b363d2e7d")
       self.pushNotifications.registerForRemoteNotifications()
+      try? self.pushNotifications.addDeviceInterest(interest: "debug-channel")
 
       return true
     }
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         self.pushNotifications.handleNotification(userInfo: userInfo)
+        completionHandler(UIBackgroundFetchResult.noData)
     }
 
 
