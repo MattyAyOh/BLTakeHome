@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,12 @@
 		6BCE5E8D2356ACAE0077636F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE5E8B2356ACAE0077636F /* Main.storyboard */; };
 		6BCE5E8F2356ACB10077636F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE5E8E2356ACB10077636F /* Assets.xcassets */; };
 		6BCE5E922356ACB10077636F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE5E902356ACB10077636F /* LaunchScreen.storyboard */; };
+		7F230255845B217DBEC5C429 /* Pods_BLTakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED805B91DB25B1037F82C6B /* Pods_BLTakeHome.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ED805B91DB25B1037F82C6B /* Pods_BLTakeHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLTakeHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24ECD4219D624D24987B39BD /* Pods-BLTakeHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLTakeHome.debug.xcconfig"; path = "Target Support Files/Pods-BLTakeHome/Pods-BLTakeHome.debug.xcconfig"; sourceTree = "<group>"; };
 		6BCE5E822356ACAE0077636F /* BLTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCE5E852356ACAE0077636F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BCE5E872356ACAE0077636F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,8 @@
 		6BCE5E8E2356ACB10077636F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BCE5E912356ACB10077636F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BCE5E932356ACB10077636F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BCE5E992356AE060077636F /* BLTakeHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BLTakeHome.entitlements; sourceTree = "<group>"; };
+		E4067B265F97F7395C9AE749 /* Pods-BLTakeHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLTakeHome.release.xcconfig"; path = "Target Support Files/Pods-BLTakeHome/Pods-BLTakeHome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F230255845B217DBEC5C429 /* Pods_BLTakeHome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,8 @@
 			children = (
 				6BCE5E842356ACAE0077636F /* BLTakeHome */,
 				6BCE5E832356ACAE0077636F /* Products */,
+				7F1512A0240DA7F886E04E4B /* Pods */,
+				FFC8FF1C1C7237B9FDFE092B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +64,7 @@
 		6BCE5E842356ACAE0077636F /* BLTakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				6BCE5E992356AE060077636F /* BLTakeHome.entitlements */,
 				6BCE5E852356ACAE0077636F /* AppDelegate.swift */,
 				6BCE5E872356ACAE0077636F /* SceneDelegate.swift */,
 				6BCE5E892356ACAE0077636F /* ViewController.swift */,
@@ -67,6 +76,23 @@
 			path = BLTakeHome;
 			sourceTree = "<group>";
 		};
+		7F1512A0240DA7F886E04E4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24ECD4219D624D24987B39BD /* Pods-BLTakeHome.debug.xcconfig */,
+				E4067B265F97F7395C9AE749 /* Pods-BLTakeHome.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FFC8FF1C1C7237B9FDFE092B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ED805B91DB25B1037F82C6B /* Pods_BLTakeHome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BCE5E962356ACB10077636F /* Build configuration list for PBXNativeTarget "BLTakeHome" */;
 			buildPhases = (
+				0EA21643FFCD673003A9D128 /* [CP] Check Pods Manifest.lock */,
 				6BCE5E7E2356ACAE0077636F /* Sources */,
 				6BCE5E7F2356ACAE0077636F /* Frameworks */,
 				6BCE5E802356ACAE0077636F /* Resources */,
+				1459D4683E85032053096748 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +160,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EA21643FFCD673003A9D128 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BLTakeHome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1459D4683E85032053096748 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLTakeHome/Pods-BLTakeHome-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLTakeHome/Pods-BLTakeHome-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BLTakeHome/Pods-BLTakeHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6BCE5E7E2356ACAE0077636F /* Sources */ = {
@@ -282,8 +352,10 @@
 		};
 		6BCE5E972356ACB10077636F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24ECD4219D624D24987B39BD /* Pods-BLTakeHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BLTakeHome/BLTakeHome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFPHP5CWRG;
 				INFOPLIST_FILE = BLTakeHome/Info.plist;
@@ -300,8 +372,10 @@
 		};
 		6BCE5E982356ACB10077636F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4067B265F97F7395C9AE749 /* Pods-BLTakeHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BLTakeHome/BLTakeHome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFPHP5CWRG;
 				INFOPLIST_FILE = BLTakeHome/Info.plist;
