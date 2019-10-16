@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PushNotifications
 
 class ViewController: UIViewController {
 
@@ -15,7 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        try? PushNotifications.shared.addDeviceInterest(interest: "Global")
+        try? PushNotifications.shared.addDeviceInterest(interest: "Game_XYZ")
     }
 
     @IBAction func sendToUserToggled(_ sender: UISwitch) {
