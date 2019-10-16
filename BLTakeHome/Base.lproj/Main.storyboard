@@ -60,6 +60,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6U-le-D9Z">
                                 <rect key="frame" x="310" y="782" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendPushNotificationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYm-ep-ecR"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Mk-kB-W09">
                                 <rect key="frame" x="225" y="543" width="160" height="31"/>

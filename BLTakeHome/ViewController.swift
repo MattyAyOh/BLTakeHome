@@ -10,7 +10,7 @@ import UIKit
 import PushNotifications
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var channelNameTextFIeld: UITextField!
     
@@ -23,6 +23,11 @@ class ViewController: UIViewController {
     @IBAction func sendToUserToggled(_ sender: UISwitch) {
         channelNameLabel.isEnabled = !sender.isOn
         channelNameTextFIeld.isEnabled = !sender.isOn
+    }
+    
+    
+    @IBAction func sendPushNotificationPressed(_ sender: Any) {
+        APIClient.shared.data(.exampleSendPushNotification(channelId: nil, userId: nil, title: "MISSING", body: "MISSING"))
     }
     
 }

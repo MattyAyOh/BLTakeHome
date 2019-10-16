@@ -13,6 +13,7 @@
 		6BCE5E8D2356ACAE0077636F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE5E8B2356ACAE0077636F /* Main.storyboard */; };
 		6BCE5E8F2356ACB10077636F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE5E8E2356ACB10077636F /* Assets.xcassets */; };
 		6BCE5E922356ACB10077636F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE5E902356ACB10077636F /* LaunchScreen.storyboard */; };
+		6BCE5E9B235796FB0077636F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE5E9A235796FB0077636F /* APIManager.swift */; };
 		7F230255845B217DBEC5C429 /* Pods_BLTakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED805B91DB25B1037F82C6B /* Pods_BLTakeHome.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		6BCE5E912356ACB10077636F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BCE5E932356ACB10077636F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BCE5E992356AE060077636F /* BLTakeHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BLTakeHome.entitlements; sourceTree = "<group>"; };
+		6BCE5E9A235796FB0077636F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E4067B265F97F7395C9AE749 /* Pods-BLTakeHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLTakeHome.release.xcconfig"; path = "Target Support Files/Pods-BLTakeHome/Pods-BLTakeHome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 			children = (
 				6BCE5E992356AE060077636F /* BLTakeHome.entitlements */,
 				6BCE5E852356ACAE0077636F /* AppDelegate.swift */,
+				6BCE5E9A235796FB0077636F /* APIManager.swift */,
 				6BCE5E872356ACAE0077636F /* SceneDelegate.swift */,
 				6BCE5E892356ACAE0077636F /* ViewController.swift */,
 				6BCE5E8B2356ACAE0077636F /* Main.storyboard */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BCE5E9B235796FB0077636F /* APIManager.swift in Sources */,
 				6BCE5E8A2356ACAE0077636F /* ViewController.swift in Sources */,
 				6BCE5E862356ACAE0077636F /* AppDelegate.swift in Sources */,
 				6BCE5E882356ACAE0077636F /* SceneDelegate.swift in Sources */,
