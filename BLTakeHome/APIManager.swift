@@ -16,7 +16,7 @@ struct APIDefaults {
         "Accept": "application/json",
         "Content-Type": "application/json"
     ]
-    static let serviceURL = URL(string: "http://YOUR_COMPUTER_NAME.local:3000")
+    static let serviceURL = URL(string: "http://localhost:3000")
     private init() {}
 }
 
@@ -44,12 +44,19 @@ enum APIError: LocalizedError {
 
 enum APIResource {
     case exampleSendPushNotification(channelId: String?, userId: String?, title: String, body: String)
+    case sendPushToChannel(channelId: String, title: String, body: String)
 
     var request: (method: HTTPMethod, path: String, headers: HTTPHeaders, parameters: HTTPParameters) {
         switch self {
+            
         case .exampleSendPushNotification(let channelId, let userId, let title, let body):
-            var parameters: HTTPParameters = ["title": title, "body": body]
-            return (.post, "api/nonexistentEndpoint", [:], parameters)
+            let parameters: HTTPParameters = ["title": title, "body": body]
+            return (.post, String("api/notImplemented/"), [:], parameters)
+            
+        case .sendPushToChannel(let channelId, let title, let body):
+            let parameters: HTTPParameters = ["title": title, "body": body]
+            return (.post, String("api/push/\(channelId)"), [:], parameters)
+            
         }
     }
 }

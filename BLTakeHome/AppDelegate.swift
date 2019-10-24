@@ -15,15 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let pushNotifications = PushNotifications.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      self.pushNotifications.start(instanceId: "3501f6a8-dce2-4333-94ac-d32b363d2e7d")
-      self.pushNotifications.registerForRemoteNotifications()
-      try? self.pushNotifications.addDeviceInterest(interest: "debug-channel")
+        self.pushNotifications.start(instanceId: "3501f6a8-dce2-4333-94ac-d32b363d2e7d")
+        self.pushNotifications.registerForRemoteNotifications()
+        try? self.pushNotifications.addDeviceInterest(interest: "debug-channel")
 
-      return true
+        return true
     }
 
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-      self.pushNotifications.registerDeviceToken(deviceToken)
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        self.pushNotifications.registerDeviceToken(deviceToken)
     }
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {

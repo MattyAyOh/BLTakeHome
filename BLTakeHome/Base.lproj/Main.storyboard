@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,9 +17,15 @@
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbL-P2-gPj">
                                 <rect key="frame" x="203" y="144" width="51" height="31"/>
+                                <connections>
+                                    <action selector="globalSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="yPz-7a-jXH"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I45-l2-30u">
                                 <rect key="frame" x="203" y="199" width="51" height="31"/>
+                                <connections>
+                                    <action selector="gameXyzSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="e61-Ld-dcm"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Global" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk5-n4-GFB">
                                 <rect key="frame" x="137" y="149" width="49" height="21"/>
@@ -126,8 +132,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bodyTextField" destination="4xo-Y5-f19" id="fgG-54-kNM"/>
                         <outlet property="channelNameLabel" destination="CSX-tl-eRE" id="HZo-dT-2rm"/>
-                        <outlet property="channelNameTextFIeld" destination="5Mk-kB-W09" id="JpY-W1-lPO"/>
+                        <outlet property="channelNameTextField" destination="5Mk-kB-W09" id="syc-j9-e5H"/>
+                        <outlet property="gameChannelSwitch" destination="I45-l2-30u" id="E4j-VY-Pf4"/>
+                        <outlet property="globalSwitch" destination="cbL-P2-gPj" id="MT5-es-k3J"/>
+                        <outlet property="sendPushButton" destination="e6U-le-D9Z" id="3fk-wR-l3K"/>
+                        <outlet property="titleTextField" destination="EA2-Th-TLt" id="UvQ-FG-hXw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

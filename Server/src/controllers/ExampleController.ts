@@ -9,7 +9,7 @@ import { Controller, Middleware, Get, Put, Post, Delete } from '@overnightjs/cor
 import { Logger } from '@overnightjs/logger';
 
 
-@Controller('api')
+@Controller('example')
 export class ExampleController {
 
 

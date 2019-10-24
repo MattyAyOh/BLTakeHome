@@ -20,6 +20,7 @@ class ExampleServer extends Server {
         super(true);
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({extended: true}));
+
         this.setupControllers();
     }
 
@@ -40,7 +41,7 @@ class ExampleServer extends Server {
         this.app.get('*', (req, res) => {
             res.send(this.SERVER_STARTED + port);
         });
-        this.app.listen(port, () => {
+        this.app.listen(port, '0.0.0.0', () => {
             Logger.Imp(this.SERVER_STARTED + port);
         });
     }
