@@ -10,7 +10,7 @@ import { Logger } from '@overnightjs/logger';
 
 
 @Controller('api/push')
-export class PushController {
+export default class PushController {
 
     /**
      * Post request handler for Push.
