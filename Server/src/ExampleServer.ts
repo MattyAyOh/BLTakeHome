@@ -41,7 +41,7 @@ class ExampleServer extends Server {
         this.app.get('*', (req, res) => {
             res.send(this.SERVER_STARTED + port);
         });
-        this.app.listen(port, '0.0.0.0', () => {
+        this.app.listen(port, () => {
             Logger.Imp(this.SERVER_STARTED + port);
         });
     }
