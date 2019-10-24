@@ -22,6 +22,10 @@ and also testing your ability to understand one of our main pain-points, Push No
 6) Update Channel field to say “Game_XYZ” instead of “Global”, and send again
 7) Webserver emits Push Notifications to the channel “Game_XYZ”
 8) Client receives nothing, because it’s not subscribed to “Game_XYZ"
+--------
+10) Flip switch to send to User_Hello, send again
+11) Webserver emits Push Notification to specific user: User_Hello
+12) Client is logged in as User_Hello, so it receives the notification
 
 
 ## **Setup:**
