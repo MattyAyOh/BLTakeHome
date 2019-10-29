@@ -47,8 +47,8 @@ enum APIResource {
 
     var request: (method: HTTPMethod, path: String, headers: HTTPHeaders, parameters: HTTPParameters) {
         switch self {
-        case .exampleSendPushNotification(let channelId, let userId, let title, let body):
-            var parameters: HTTPParameters = ["title": title, "body": body]
+        case .exampleSendPushNotification(let channelId):
+            var parameters: HTTPParameters = [:]
             return (.post, "api/nonexistentEndpoint", [:], parameters)
         }
     }

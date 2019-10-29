@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
       self.pushNotifications.start(instanceId: "3501f6a8-dce2-4333-94ac-d32b363d2e7d")
       self.pushNotifications.registerForRemoteNotifications()
-      try? self.pushNotifications.addDeviceInterest(interest: "debug-channel")
+      try? self.pushNotifications.addDeviceInterest(interest: "debug-channel-YOURNAME")
 
       return true
     }

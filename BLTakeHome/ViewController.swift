@@ -16,15 +16,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        try? PushNotifications.shared.addDeviceInterest(interest: "Global")
-        try? PushNotifications.shared.addDeviceInterest(interest: "Game_XYZ")
+        try? PushNotifications.shared.addDeviceInterest(interest: "Global-YOURNAME")
+        try? PushNotifications.shared.addDeviceInterest(interest: "Game_XYZ-YOURNAME")
     }
-
-    @IBAction func sendToUserToggled(_ sender: UISwitch) {
-        channelNameLabel.isEnabled = !sender.isOn
-        channelNameTextFIeld.isEnabled = !sender.isOn
-    }
-    
     
     @IBAction func sendPushNotificationPressed(_ sender: Any) {
         APIClient.shared.data(.exampleSendPushNotification(channelId: nil, userId: nil, title: "MISSING", body: "MISSING"))
