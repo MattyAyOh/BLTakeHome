@@ -1,16 +1,16 @@
 PODS:
-  - PushNotifications (2.1.2)
+  - OneSignal (2.12.2)
 
 DEPENDENCIES:
-  - PushNotifications
+  - OneSignal (< 3.0, >= 2.11.2)
 
 SPEC REPOS:
   trunk:
-    - PushNotifications
+    - OneSignal
 
 SPEC CHECKSUMS:
-  PushNotifications: 3d1ac73f4e1e9dc3de8fa8319e3e53bd00be47dc
+  OneSignal: b2c1511c6b5db2d3b0ce1859f574dcf190dde5f3
 
-PODFILE CHECKSUM: 53d8c9f889123404fa009892b3facfd30618cff4
+PODFILE CHECKSUM: 865a309a64b6857106fbec852a8a995bcf6e1806
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.8.4

@@ -1,8 +1,9 @@
 platform :ios, '13.0'
 
 target 'BLTakeHome' do
-  use_frameworks!
+  pod 'OneSignal', '>= 2.11.2', '< 3.0'
+end
 
-  pod 'PushNotifications'
-
+target 'OneSignalNotificationServiceExtension' do
+  pod 'OneSignal', '>= 2.11.2', '< 3.0'
 end
