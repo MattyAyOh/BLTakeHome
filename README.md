@@ -38,4 +38,3 @@ and also testing your ability to understand one of our main pain-points, Push No
 ## **Resources:**
 Typescript + Express: https://levelup.gitconnected.com/setup-express-with-typescript-in-3-easy-steps-484772062e01
 Publishing Notifications: https://documentation.onesignal.com/reference
-# BLTakeHome-Richardson
