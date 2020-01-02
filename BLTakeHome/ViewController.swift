@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PushNotifications
+import OneSignal
 
 class ViewController: UIViewController {
     
@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        try? PushNotifications.shared.addDeviceInterest(interest: "Global-YOURNAME")
-        try? PushNotifications.shared.addDeviceInterest(interest: "Game_XYZ-YOURNAME")
+        OneSignal.sendTag("game-xyz-YOURNAME", value: "true")
+        OneSignal.sendTag("announcements-YOURNAME", value: "true")
     }
     
     @IBAction func sendPushNotificationPressed(_ sender: Any) {

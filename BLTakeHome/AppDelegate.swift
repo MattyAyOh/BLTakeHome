@@ -7,30 +7,30 @@
 //
 
 import UIKit
-import PushNotifications
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    let pushNotifications = PushNotifications.shared
-
+        
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      self.pushNotifications.start(instanceId: "3501f6a8-dce2-4333-94ac-d32b363d2e7d")
-      self.pushNotifications.registerForRemoteNotifications()
-      try? self.pushNotifications.addDeviceInterest(interest: "debug-channel-YOURNAME")
+        
+        let initSettings = [kOSSettingsKeyAutoPrompt: false]
+        OneSignal.initWithLaunchOptions(
+            launchOptions,
+            appId: "d7d16830-f584-40a7-83c3-ed1eb2932538",
+            handleNotificationAction: nil,
+            settings: initSettings
+        )
+        
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
 
-      return true
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
+                
+        return true
     }
 
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-      self.pushNotifications.registerDeviceToken(deviceToken)
-    }
-
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        self.pushNotifications.handleNotification(userInfo: userInfo)
-        completionHandler(UIBackgroundFetchResult.noData)
-    }
-
-
+    
 }
 
