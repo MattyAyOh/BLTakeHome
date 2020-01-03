@@ -4,11 +4,15 @@
 **The purpose of this exercise is to give you a practical test of your ability to write some client and server functionality,  
 and also testing your ability to understand one of our main pain-points, Push Notifications**
 
+**The project should take around 3-4 hours, please let us know if you have concerns about the timeframe**
+
 ## **So here’s the outline for the exercise:**
 - Subscribe an iOS app to multiple Push Notification channels
 - Client will also be able to send requests to a webserver to create Push Notifications, which the same Client will in turn receive
 - Write a webserver with:
   - an endpoint that emits push notifications on a channel
+
+**NOTE:** In order to keep your push notification channels unique, please add `YOURNAME` as a suffix to the notification channels
 
 ## **Example App Flow:**
 1) Have two UISwitches for channels, “announcements-YOURNAME”, “game-xyz-YOURNAME”.  Toggle “announcements-YOURNAME” ON, and "game-xyz-YOURNAME" OFF
